@@ -78,14 +78,15 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:8d6cf0220da7a07cfc2c7f1064590a32c5f35a3590eabbf1bf3c1d20a528c867"
+  digest = "1:58e4214522ca6ea2f5441338f18efed88ff009868e9d9e25fe0e9a0029e7c887"
   name = "github.com/robintsunny/goyagi"
   packages = [
+    "pkg/health",
     "pkg/server",
     "pkg/signals",
   ]
   pruneopts = "UT"
-  revision = "7e74aa65e6b00d61f35147b715cf1c0d5b2ef0b5"
+  revision = "5c8297b6d24627e44c0deb6f75e19342da36303f"
 
 [[projects]]
   digest = "1:6112a5eaec2ec65df289ccbb7a730aaf03e3c5cce6c906d367ccf9b7ac567604"
@@ -151,6 +152,7 @@
   input-imports = [
     "github.com/labstack/echo",
     "github.com/lob/logger-go",
+    "github.com/robintsunny/goyagi/pkg/health",
     "github.com/robintsunny/goyagi/pkg/server",
     "github.com/robintsunny/goyagi/pkg/signals",
     "github.com/stretchr/testify/assert",
