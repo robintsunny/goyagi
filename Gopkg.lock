@@ -78,11 +78,14 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:6c16f887fb29d9da197040faf0c8fe194d6f27346d29a1d4692a29fd64be2aa9"
+  digest = "1:8d6cf0220da7a07cfc2c7f1064590a32c5f35a3590eabbf1bf3c1d20a528c867"
   name = "github.com/robintsunny/goyagi"
-  packages = ["pkg/server"]
+  packages = [
+    "pkg/server",
+    "pkg/signals",
+  ]
   pruneopts = "UT"
-  revision = "62ba70c5256aa636e9ffa58559ef9c6f994b5ed7"
+  revision = "7e74aa65e6b00d61f35147b715cf1c0d5b2ef0b5"
 
 [[projects]]
   digest = "1:6112a5eaec2ec65df289ccbb7a730aaf03e3c5cce6c906d367ccf9b7ac567604"
@@ -149,6 +152,7 @@
     "github.com/labstack/echo",
     "github.com/lob/logger-go",
     "github.com/robintsunny/goyagi/pkg/server",
+    "github.com/robintsunny/goyagi/pkg/signals",
     "github.com/stretchr/testify/assert",
     "github.com/stretchr/testify/require",
   ]
