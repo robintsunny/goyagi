@@ -1,11 +1,10 @@
 package main
 
-
 import (
 	"net/http"
 
-	"github.com/robintsunny/goyagi/pkg/server"
 	"github.com/lob/logger-go"
+	"github.com/robintsunny/goyagi/pkg/server"
 )
 
 func main() {
@@ -16,8 +15,7 @@ func main() {
 	log.Info("server started")
 
 	err := srv.ListenAndServe()
-
-	i err != nil && err != http.ErrServerClosed {
+	if err != nil && err != http.ErrServerClosed {
 		log.Err(err).Fatal("server stopped")
 	}
 
