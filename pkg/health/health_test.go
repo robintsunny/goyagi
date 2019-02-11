@@ -11,6 +11,7 @@ import (
 )
 
 func TestHealthRoute(t *testing.T) {
+
 	e := echo.New()
 
 	RegisterRoutes(e)
@@ -23,5 +24,5 @@ func TestHealthRoute(t *testing.T) {
 	e.ServeHTTP(w, req)
 
 	assert.Equal(t, http.StatusOK, w.Code, "incorrect status code")
-	assert.Equal(t, `{"healthy";true}`, w.Body.String(), "incorrect response")
+	assert.Equal(t, `{"healthy":true}`, w.Body.String(), "incorrect response")
 }
