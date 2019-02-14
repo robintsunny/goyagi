@@ -77,16 +77,17 @@
   version = "v1.0.0"
 
 [[projects]]
-  branch = "master"
-  digest = "1:58e4214522ca6ea2f5441338f18efed88ff009868e9d9e25fe0e9a0029e7c887"
+  branch = "base-server"
+  digest = "1:b3c97519f4675fc0c298f229f71b5acb52fbfbbb6096d51f9f46e7ac90428bc3"
   name = "github.com/robintsunny/goyagi"
   packages = [
+    "pkg/config",
     "pkg/health",
     "pkg/server",
     "pkg/signals",
   ]
   pruneopts = "UT"
-  revision = "5c8297b6d24627e44c0deb6f75e19342da36303f"
+  revision = "09c46b5fddb8dd7257a6fc14ad44693c0a0a85e0"
 
 [[projects]]
   digest = "1:6112a5eaec2ec65df289ccbb7a730aaf03e3c5cce6c906d367ccf9b7ac567604"
@@ -152,6 +153,7 @@
   input-imports = [
     "github.com/labstack/echo",
     "github.com/lob/logger-go",
+    "github.com/robintsunny/goyagi/pkg/config",
     "github.com/robintsunny/goyagi/pkg/health",
     "github.com/robintsunny/goyagi/pkg/server",
     "github.com/robintsunny/goyagi/pkg/signals",
