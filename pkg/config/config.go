@@ -3,15 +3,21 @@ package config
 import "os"
 
 type Config struct {
-	Environment string
-	Port        int
+	DatabaseHost     string
+	DatabasePort     int
+	DatabaseName     string
+	DatabaseUser     string
+	DatabasePassword string
+	Environment      string
+	Port             int
 }
 
 const environmentENV = "ENVIRONMENT"
 
 func New() Config {
 	cfg := Config{
-		Port: 3000,
+		Port:         3000,
+		DatabasePort: 5432,
 	}
 
 	switch os.Getenv(environmentENV) {

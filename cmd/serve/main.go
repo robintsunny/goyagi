@@ -11,7 +11,10 @@ import (
 func main() {
 	log := logger.New()
 
-	app := application.New()
+	app, err := application.New()
+	if err != nil {
+		log.Err(err).Fatal("failed to initialize application")
+	}
 
 	srv := server.New()
 
