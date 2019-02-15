@@ -16,11 +16,11 @@ func main() {
 		log.Err(err).Fatal("failed to initialize application")
 	}
 
-	srv := server.New()
+	srv := server.New(app)
 
 	log.Info("server started", logger.Data{"port": app.Config.Port})
 
-	err := srv.ListenAndServe()
+	err = srv.ListenAndServe()
 	if err != nil && err != http.ErrServerClosed {
 		log.Err(err).Fatal("server stopped")
 	}

@@ -112,17 +112,20 @@
 
 [[projects]]
   branch = "base-server"
-  digest = "1:508bb8ba10cc63bbbb749844ac368fa09aaa48f6b97271334ee926f3e2e301b9"
+  digest = "1:f737994d37de37003a7f42a2ef98cc7689cb73db518985e0d4e0beac4b38bd29"
   name = "github.com/robintsunny/goyagi"
   packages = [
+    "internal/test",
+    "pkg/application",
     "pkg/config",
     "pkg/database",
     "pkg/health",
+    "pkg/model",
     "pkg/server",
     "pkg/signals",
   ]
   pruneopts = "UT"
-  revision = "6ca20e50f12abb66bfa0df64622608fc1bb6d306"
+  revision = "9b0346e09ca8ad5ecb66a90bd6bfaffe70e56838"
 
 [[projects]]
   digest = "1:6112a5eaec2ec65df289ccbb7a730aaf03e3c5cce6c906d367ccf9b7ac567604"
@@ -196,13 +199,17 @@
   analyzer-version = 1
   input-imports = [
     "github.com/go-pg/pg",
+    "github.com/go-pg/pg/orm",
     "github.com/labstack/echo",
     "github.com/lob/logger-go",
     "github.com/pkg/errors",
     "github.com/robinjoseph08/go-pg-migrations",
+    "github.com/robintsunny/goyagi/internal/test",
+    "github.com/robintsunny/goyagi/pkg/application",
     "github.com/robintsunny/goyagi/pkg/config",
     "github.com/robintsunny/goyagi/pkg/database",
     "github.com/robintsunny/goyagi/pkg/health",
+    "github.com/robintsunny/goyagi/pkg/model",
     "github.com/robintsunny/goyagi/pkg/server",
     "github.com/robintsunny/goyagi/pkg/signals",
     "github.com/stretchr/testify/assert",

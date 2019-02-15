@@ -5,8 +5,8 @@ import (
 
 	"github.com/go-pg/pg"
 	"github.com/labstack/echo"
+	"github.com/robintsunny/go/pkg/application"
 	"github.com/robintsunny/go/pkg/model"
-	"github.com/robintsunny/goyagi/pkg/application"
 )
 
 type handler struct {

@@ -2,7 +2,7 @@ package movies
 
 import (
 	"github.com/labstack/echo"
-	"github.com/robintsunny/goyagi/pkg/application"
+	"github.com/robintsunny/go/pkg/application"
 )
 
 // RegisterRoutes takes in an Echo router and registers routes onto it.
