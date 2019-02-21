@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/lob/logger-go"
+	logger "github.com/lob/logger-go"
 	migrations "github.com/robinjoseph08/go-pg-migrations"
 	"github.com/robintsunny/goyagi/pkg/config"
 	"github.com/robintsunny/goyagi/pkg/database"
