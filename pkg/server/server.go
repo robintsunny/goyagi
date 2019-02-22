@@ -9,7 +9,10 @@ import (
 	"github.com/lob/logger-go"
 	"github.com/robintsunny/go/pkg/application"
 	"github.com/robintsunny/go/pkg/binder"
+	"github.com/robintsunny/go/pkg/errors"
+	"github.com/robintsunny/go/pkg/metrics"
 	"github.com/robintsunny/go/pkg/movies"
+	"github.com/robintsunny/go/pkg/recovery"
 	"github.com/robintsunny/goyagi/pkg/health"
 	"github.com/robintsunny/goyagi/pkg/signals"
 )
@@ -21,8 +24,12 @@ func New(app application.App) *http.Server {
 
 	b := binder.New()
 	e.Binder = b
-	e.Use(logger.Middleware())
 
+	e.Use(metrics.Middleware(app.Metrics))
+	e.Use(logger.Middleware())
+	e.Use(recovery.Middleware())
+
+	errors.RegisterErrorHandler(e, app)
 	health.RegisterRoutes(e)
 	movies.RegisterRoutes(e, app)
 
