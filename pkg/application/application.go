@@ -12,9 +12,10 @@ import (
 // App contains necessary references that will be persisted throughout the
 // application's lifecycle.
 type App struct {
-	Config config.Config
-	DB     *pg.DB
-	Sentry sentry.Sentry
+	Config  config.Config
+	DB      *pg.DB
+	Sentry  sentry.Sentry
+	Metrics metrics.Metrics
 }
 
 // New creates a new instance of App with a Config and DB connection.
